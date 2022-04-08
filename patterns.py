@@ -1,0 +1,8 @@
+BASE85 = b'^[0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&()*+-;<=>?@^_`{|}~]{2,}$'
+BASE64 = b'^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})$'
+BASE58 = b'^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]+$'
+BASE32 = b'^(?:[A-Z2-7+/]{8})*(?:[A-Z2-7+/]{5}===|[A-Z2-7+/]{7}=|[A-Z2-7+/]{4}====|[A-Z2-7+/]{2}======|[A-Z2-7+/]{8})$'
+BASE16 = b'^([0-9A-F]{2})+$|^([0-9a-f]{2})+$'
+URLSAFE_BASE64 = b'^(?:[A-Za-z0-9-_]{4})*(?:[A-Za-z0-9-_]{2}==|[A-Za-z0-9-_]{3}=|[A-Za-z0-9-_]{4})$'
+HEX = b'^(0[xX])?[0-9a-f]+$|^(0[xX])?[0-9A-F]+$'
+TARGET = b'^([a-z]+)((\ -{1,2}[A-Za-z]+(\ [A-Za-z0-9\'"/.$\{\}\\\(\)*!@#%^&:<>;]+)?)|(( [a-z.>&/.0-9]+)))*$'
