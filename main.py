@@ -35,7 +35,7 @@ def BFS(code: bytes, decode_methods: list, decrypt_methods: list, max_depth:int=
             bfs.put((decoded_code, chain + [method], depth + 1))
         
         for method in decrypt_methods:
-            for key in range(256):
+            for key in range(1, 256):
                 decrypt_code = method(this_code, key)
                 if not avaliable(decrypt_code):
                     continue
@@ -81,10 +81,13 @@ if __name__ == "__main__":
         if each.endswith('_decrypt'):
             decrypt_methods.append(methods[each])
 
-    res = BFS(code, decode_methods, decrypt_methods, 5)
+    res = BFS(code, decode_methods, decrypt_methods, 3)
     # print(res[0][1])
     for result, chains in res:
         print("result:", result)
+        if len(chains) == 0:
+            print("Plain data")
+            continue
         if isinstance(chains[0], tuple):
             print(str(chains[0][0])[10:-23] + '(%d)' % chains[0][1], end='')
         else:
