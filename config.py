@@ -1,0 +1,1 @@
+BLACK_LIST = [b"whoami", b"ls"]
